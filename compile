@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+# This doesn't need to link with any external libraries
+# so compiling should be very straightforward. The following
+# command worked on the machines I tested.
+#
+
+nvcc main.cpp Cell.cpp Atoms.cpp Device_Atoms.cpp Box.cpp Device_Box.cpp FileProcessor.cpp Position_Update.cpp TBSMA_Compute.cpp device_space.cu TBSMA_GPU_Compute.cu -o tbsma-gpu
